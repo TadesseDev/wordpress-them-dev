@@ -1,3 +1,75 @@
-#mainText {
-    color: red;
+header {
+    height: 60px;
+    width: 100%;
+    background-color: #340100;
+    color: darkorange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.menu-mainmenu-container {
+    height: 25px;
+}
+
+.menu-mainmenu-container li a {
+    color: #FFFE32;
+    text-decoration: none;
+}
+
+.menu-mainmenu-container li a:hover {
+    text-decoration: underline;
+}
+
+.menu-mainmenu-container .menu {
+    display: flex;
+    align-items: flex-start;
+}
+
+.menu-mainmenu-container .menu-item {
+    display: inline-block;
+    list-style: none;
+    margin: 0px 10px;
+}
+
+#menu-mainmenu>.menu-item>.sub-menu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+}
+
+#menu-mainmenu>.menu-item>.sub-menu>.menu-item {
+    margin-left: -50%;
+}
+
+#menu-mainmenu .sub-menu .menu-item {
+    text-align: center;
+    background-color: #340100;
+    padding: 10px 20px;
+    margin-bottom: 1px;
+}
+
+#menu-mainmenu>.menu-item>.sub-menu::before {
+    content: "";
+    height: 20px;
+}
+
+#menu-mainmenu>.menu-item>.sub-menu>.menu-item>.sub-menu {
+    position: absolute;
+    display: none;
+    left: 87%;
+    top: 50%;
+    padding-left: 0px;
+}
+
+#menu-mainmenu>.menu-item>.sub-menu>.menu-item>.sub-menu>.menu-item:first-child {
+    margin-bottom: 2px;
+}
+
+#menu-mainmenu>.menu-item>.sub-menu>.menu-item>.sub-menu>.menu-item {
+    display: flex;
 }
