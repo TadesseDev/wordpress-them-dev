@@ -1,4 +1,4 @@
+<!-- this is template for the homepage -->
 <?php get_header();?>
-<h1><?php the_title();?></h1>
-<?php get_template_part("includes/include","section") ?>
+<?php get_template_part("includes/include","allPosts")?>
 <?php get_footer(); ?>

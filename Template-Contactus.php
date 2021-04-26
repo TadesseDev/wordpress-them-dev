@@ -3,7 +3,7 @@
 Template Name: contact us
 */
 ?>
-<?php get_header("conntactus");?>
+<?php get_header();?>
 <div class="container">
 <div  id="mainText">this is a conatact us page template </div>
 </div>
