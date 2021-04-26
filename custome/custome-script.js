@@ -46,9 +46,9 @@ var intersectionObserver = new IntersectionObserver(function(entries) {
     // and we do not need to do anything.
     entries.forEach(entry => {
         if (entry.intersectionRatio <= 0) {
-            header.css({ 'height': '50px' });
+            header.css({ 'height': '50px', 'background': '#340100BF' });
         } else {
-            header.css({ 'height': '80px' });
+            header.css({ 'height': '80px', 'background': '#340100FF' });
         }
     });
 });

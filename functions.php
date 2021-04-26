@@ -65,7 +65,39 @@ add_action("wp_enqueue_scripts","add_custome_js");
 //add suports
 add_theme_support("menus");
 add_theme_support( 'post-thumbnails' );
-add_image_size( 'slider', 1000, 500, true);
+add_theme_support( 'post-thumbnails' );
+
+function my_side_bars(){
+    register_sidebar(
+        array(
+            'id'            => 'page-sidebar',
+            'name'          => __( 'page-sidebar' ),
+            'description'   => __( 'can be used to display contnts on the pages sidebar.' ),
+            'before_widget' => '<div class="page-sidebar">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="sidebar-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+    register_sidebar(
+        array(
+            'id'            => 'blog-sidebar',
+            'name'          => __( 'blog-sidebar' ),
+            'description'   => __( 'can be used to display contnts on a side of post list or a single post.' ),
+            'before_widget' => '<div class="blog-sidebar">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="sidebar-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+}
+add_action( 'widgets_init', 'my_side_bars' );
+
+
+// customize futere image
+add_image_size( 'slider', 2000, 1000, true);
+add_image_size( 'slider-medium', 1000, 500, true);
+add_image_size( 'slider-small', 400, 200, true);
 add_image_size( 'prefered-thumb', 239, 239, true); // false no crop and tru is for crop
 //set_post_thumbnail_size( 50, 50 ); resizing
 //set_post_thumbnail_size( 50, 50, true ); croping
