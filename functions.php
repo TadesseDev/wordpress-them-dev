@@ -65,7 +65,6 @@ add_action("wp_enqueue_scripts","add_custome_js");
 //add suports
 add_theme_support("menus");
 add_theme_support( 'post-thumbnails' );
-add_theme_support( 'post-thumbnails' );
 
 function my_side_bars(){
     register_sidebar(

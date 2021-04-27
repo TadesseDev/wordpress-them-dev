@@ -9,10 +9,6 @@
 </head>
 <body>
     <header>
-        
-    <span>
-        THIS IS BRAND
-</span>      
     <?php wp_nav_menu(
         array(
             'container_class' => 'menuContainer',
@@ -22,6 +18,10 @@
             'fallback_cb' => false,
         )
         ); ?>
+            <span class="header-search-icon">search</span>
+        <div class="container search-bar">
+            <?php get_search_form();?>
+            </div>
     </header>
     <div class="container">
     <div class="header-place-holder">

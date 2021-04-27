@@ -46,11 +46,20 @@ var intersectionObserver = new IntersectionObserver(function(entries) {
     // and we do not need to do anything.
     entries.forEach(entry => {
         if (entry.intersectionRatio <= 0) {
-            header.css({ 'height': '50px', 'background': '#340100BF' });
+            header.css({ 'height': '50px', 'background': '#340100EF', });
         } else {
-            header.css({ 'height': '80px', 'background': '#340100FF' });
+            header.css({ 'height': '80px', 'background': '#340100FF', });
         }
     });
 });
 // start observing
 intersectionObserver.observe(header_place_holder);
+
+// search functions 
+jQuery('.header-search-icon').on('click', function() {
+    jQuery('.search-bar').css({ 'display': 'block' });
+});
+jQuery('.header-search-icon').on('focusout', function() {
+    jQuery('.search-bar').css({ 'display': 'none' });
+    console.log('added');
+});

@@ -22,6 +22,7 @@ header {
     position: sticky;
     top: 0px;
     z-index: 10;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -33,6 +34,16 @@ footer {
     align-items: center;
     bottom: 0;
     margin-top: -60px;
+}
+
+.search-bar {
+    position: relative;
+    display: none;
+    background-color: rgba(255, 140, 0, 0.508);
+    backdrop-filter: blur(5px);
+    height: 80px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 body>.container {
@@ -229,6 +240,7 @@ footer .menuContainer li a {
 .all-post .card.post-card {
     padding: 0px;
     position: relative;
+    margin: 10px 1px;
 }
 
 .all-post .card .content {
@@ -240,11 +252,12 @@ footer .menuContainer li a {
     width: 100%;
     height: 75%;
     margin-top: 5%;
-    background-color: #3401004F;
+    background-color: #0000004F;
     top: 0;
     opacity: 0;
     transition: all 0.5s ease-in-out;
     border-radius: 10px;
+    backdrop-filter: blur(15px);
 }
 
 .all-post .card .content a {
@@ -313,4 +326,35 @@ footer .menuContainer li a {
 
 .sidebar-container ul li:hover a {
     text-decoration: underline;
+}
+
+.search-form {
+    height: 100%;
+}
+
+.search-form form {
+    height: 100%;
+}
+
+.search-form input[name="s"] {
+    width: 85%;
+    text-align: center;
+    margin-top: 10px;
+    height: 80%;
+    background: transparent;
+    border: 3px solid var(--main-dark);
+    border-radius: 15px;
+    font-size: 1.8em;
+}
+
+.search-form input[name="s"]:focus-visible {
+    border: none;
+    outline: none;
+}
+
+.search-form button[type="submit"] {
+    width: 10%;
+    background: none;
+    border: none;
+    font-size: 2.4em;
 }
