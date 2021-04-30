@@ -1,3 +1,7 @@
+* {
+    background: none;
+}
+
 html,
 body {
     margin: 0px;
@@ -9,6 +13,8 @@ body {
 :root {
     --post-title: 'category-tittle';
     --main-dark: #340100FF;
+    --dark-orange: darkorange;
+    --bold-yellow: #FFFE32;
 }
 
 header {
@@ -23,6 +29,11 @@ header {
     top: 0px;
     z-index: 10;
     flex-wrap: wrap;
+}
+
+header .row {
+    width: 100%;
+    height: 100%;
 }
 
 footer {
@@ -41,6 +52,7 @@ footer {
     display: none;
     background-color: rgba(255, 140, 0, 0.508);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     height: 80px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -53,13 +65,16 @@ body>.container {
     padding-top: 80px;
 }
 
-.menuContainer {
-    height: 100%;
-    width: 85%;
+.top-menu-bar {
     display: flex;
     justify-content: center;
+}
+
+.menuContainer {
+    display: flex;
     align-items: center;
     float: right;
+    position: relative;
 }
 
 .menuContainer li a {
@@ -243,6 +258,16 @@ footer .menuContainer li a {
     margin: 10px 1px;
 }
 
+
+/* .all-post .card .content::before {
+    content: "";
+    background-color: inherit;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(4px);
+} */
+
 .all-post .card .content {
     position: absolute;
     padding: 5px;
@@ -252,12 +277,13 @@ footer .menuContainer li a {
     width: 100%;
     height: 75%;
     margin-top: 5%;
-    background-color: #0000004F;
+    background-color: #0006;
     top: 0;
     opacity: 0;
     transition: all 0.5s ease-in-out;
     border-radius: 10px;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 .all-post .card .content a {
@@ -332,18 +358,23 @@ footer .menuContainer li a {
     height: 100%;
 }
 
+.search-form .row {
+    height: auto;
+}
+
 .search-form form {
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .search-form input[name="s"] {
-    width: 85%;
+    width: 100%;
     text-align: center;
     margin-top: 10px;
-    height: 80%;
+    /* height: 80%; */
     background: transparent;
-    border: 3px solid var(--main-dark);
-    border-radius: 15px;
+    border: none;
     font-size: 1.8em;
 }
 
@@ -353,8 +384,41 @@ footer .menuContainer li a {
 }
 
 .search-form button[type="submit"] {
-    width: 10%;
+    color: var(--main-dark);
     background: none;
     border: none;
     font-size: 2.4em;
+}
+
+.header-search-icon {
+    position: relative;
+    height: 100%;
+}
+
+.icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon img {
+    height: auto;
+}
+
+.icon-image-30 {
+    width: 30px;
+}
+
+.icon-image-40 {
+    width: 40px;
+}
+
+.icon-image-50 {
+    width: 50px;
+}
+
+button[type="submit"] img {
+    margin-top: -8px;
+    margin-left: -15px;
 }

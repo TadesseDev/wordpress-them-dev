@@ -57,9 +57,9 @@ intersectionObserver.observe(header_place_holder);
 
 // search functions 
 jQuery('.header-search-icon').on('click', function() {
-    jQuery('.search-bar').css({ 'display': 'block' });
-});
-jQuery('.header-search-icon').on('focusout', function() {
-    jQuery('.search-bar').css({ 'display': 'none' });
-    console.log('added');
+    var positioning = jQuery('.search-bar').css("display");
+    if (positioning == `block`)
+        jQuery('.search-bar').css({ 'display': 'none' });
+    else
+        jQuery('.search-bar').css({ 'display': 'block' });
 });
